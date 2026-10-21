@@ -30,3 +30,16 @@
 #   - If those are the same, then just output the teams.
 
 #   4) Say goodbye and break out of the loop
+
+teams = []
+#Number of teams
+print("How many teams are playing?")
+number_of_teams=int(input())
+for i in range(number_of_teams):
+    name=input("")
+    team=[name,0,0,0,0,0,0]
+    teams.append(team)
+#Statistics of the teams when competing with one another
+print("Which pair of teams competed with one another?")
+
+
