@@ -31,15 +31,23 @@
 
 #   4) Say goodbye and break out of the loop
 
+
 teams = []
+wins = []
+losses = []
+goals_for = []
+goals_against = []
 #Number of teams
 print("How many teams are playing?")
-number_of_teams=int(input())
+number_of_teams = int(input())
 for i in range(number_of_teams):
-    name=input("")
-    team=[name,0,0,0,0,0,0]
+    name = input("Team name: ")
+    team = [name, 0, 0, 0, 0, 0, 0]
     teams.append(team)
 #Statistics of the teams when competing with one another
 print("Which pair of teams competed with one another?")
-
-
+userChoice1 = input()
+userChoice2 = input()
+print("Input the  of each team?")
+satistics1 = []
+satistics2 = []
