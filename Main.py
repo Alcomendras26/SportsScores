@@ -32,7 +32,7 @@
 #   4) Say goodbye and break out of the loop
 
 
-teams = []
+teams=[]
 wins = []
 losses = []
 goals_for = []
@@ -44,10 +44,25 @@ for i in range(number_of_teams):
     name = input("Team name: ")
     team = [name, 0, 0, 0, 0, 0, 0]
     teams.append(team)
-#Statistics of the teams when competing with one another
-print("Which pair of teams competed with one another?")
-userChoice1 = input()
-userChoice2 = input()
-print("Input the  of each team?")
-satistics1 = []
-satistics2 = []
+#Menu
+
+for i in range(number_of_teams):
+    print(teams[i])
+
+print("1:Menu")
+print("2:Add Score")
+print("3:Team Stats")
+print("4:Standings")
+
+Score="Score"
+Team_Stats="Team Stats"
+Standings="Standings"
+
+Choice=input()
+
+if Choice == "1":
+
+    print("Which teams competed")
+    
+    wins1=int(input("Wins: "))
+    losses1=int(input("Losses: "))
