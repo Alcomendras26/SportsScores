@@ -33,36 +33,30 @@
 
 
 teams=[]
-wins = []
-losses = []
-goals_for = []
-goals_against = []
 #Number of teams
 print("How many teams are playing?")
 number_of_teams = int(input())
 for i in range(number_of_teams):
     name = input("Team name: ")
-    team = [name, 0, 0, 0, 0, 0, 0]
+    team= [name,0,0,0,0,0]
     teams.append(team)
+
 #Menu
 
 for i in range(number_of_teams):
     print(teams[i])
 
-print("1:Menu")
-print("2:Add Score")
-print("3:Team Stats")
-print("4:Standings")
+print("MENU")
 
-Score="Score"
-Team_Stats="Team Stats"
-Standings="Standings"
+print("1:Add Score")
+print("2:Team Stats")
+print("3:Standings")
+print("4:Exit")
 
 Choice=input()
 
 if Choice == "1":
+    print("Which teams competed?")
 
-    print("Which teams competed")
-    
-    wins1=int(input("Wins: "))
-    losses1=int(input("Losses: "))
+for i in range(number_of_teams):
+    score = int(input("Team goals: "))
