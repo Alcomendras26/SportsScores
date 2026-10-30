@@ -17,9 +17,7 @@
 #   3) See Overall Standings
 #   4) Quit
 
-#   1) Enter team 1, team 2, goals for team 1, goals for team 2
-#       - Find the teams, update the games played, add the goals for and against, and decide if it's a win, lose or tie
-
+#
 #   2) Print a list of team names.
 #       Once the user selects, Print out their stats
 
@@ -57,6 +55,52 @@ Choice=input()
 
 if Choice == "1":
     print("Which teams competed?")
+# 1) Enter team 1, team 2, goals for team 1, goals for team 2
+#       - Find the teams, update the games played, add the goals for and against, and decide if it's a win, lose or tie
 
-for i in range(number_of_teams):
-    score = int(input("Team goals: "))
+    for i in range(number_of_teams):
+        print(f"{i+1}: {teams[i][0]}")
+    selected_team1=int(input("Team number: "))-1
+
+    print(f"You chose {teams[selected_team1][0]}")
+
+    selected_team2 = int(input("Team number: ")) - 1
+
+    print(f"You chose {teams[selected_team2][0]}")
+
+    print("How many wins for each team?")
+
+    wins1=int(input("Wins1:"))
+    teams[selected_team1][5]+=wins1
+
+
+    wins2 = int(input("Wins2:"))
+    teams[selected_team2][5] += wins2
+
+
+    print("How many losses for each team?")
+
+    losses1 = int(input("Losses1:"))
+    teams[selected_team1][4] += losses1
+
+    losses2 = int(input("Losses2:"))
+    teams[selected_team2][4] += losses2
+
+
+
+# Creating lists
+#empty = []
+#nums = [5]
+#mixed = [1, "two", 3.0, True]
+# List methods
+#nums.append("x") # Add to end
+#nums.insert(0, "y") # Insert at index 0
+#nums.extend(["z", 5]) # Extend with iterable
+#nums.remove("x") # Remove first "x"
+#last = nums.pop() # Pop returns last element
+# List indexing and checks
+#fruits = ["banana", "apple", "orange"]
+#fruits[0] # "banana"
+#fruits[-1] # "orange"
+#"apple" in fruits # True
+#len(fruits) # 3
